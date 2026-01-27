@@ -160,9 +160,17 @@ hr {
 }
 
 @media (max-width: 650px) {
-  .profile { width: 180px; height: 180px; }
+  body { margin: 0; }
+  .container { max-width: 100%; }
+  .container td { padding: 12px !important; }
+  name { font-size: 32px; }
+  heading { font-size: 24px; }
+  papertitle { font-size: 18px; }
+  body, td, th, tr, p, a, strong { font-size: 18px; line-height: 1.55; }
+  .small-muted { font-size: 13px; }
+  .profile { width: 160px; height: 160px; }
   .pub-table, .pub-table tr, .pub-table td { display: block; width: 100%; }
   .pub-thumb { padding: 10px 6px 0; width: 100%; }
-  .pub-thumb img { width: 200px; margin: 0 auto; }
+  .pub-thumb img { width: 160px; margin: 0 auto; }
   .pub-details { padding: 8px 6px 12px; }
 }
