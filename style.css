@@ -1,0 +1,168 @@
+/* Minimal academic homepage styling (Jon Barron / Deepak Pathak / Tairan He vibe) */
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body, td, th, tr, p, a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+heading {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 18px 0;
+}
+
+.links {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.profile {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e0e0e0;
+}
+
+.pub-table {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+}
+
+.pub-thumb {
+  padding: 15px;
+  width: 240px;
+  vertical-align: top;
+}
+
+.pub-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.pub-details {
+  padding: 15px;
+  vertical-align: top;
+}
+
+.pub-links {
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.abstract, .bibtex {
+  margin-top: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: height 0.35s ease, opacity 0.25s ease, transform 0.25s ease, margin-top 0.2s ease;
+}
+
+.abstract {
+  color: #222;
+}
+
+.abstract.open, .bibtex.open {
+  margin-top: 6px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bibtex pre {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 10px 12px;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+/* Publication pages */
+.backlink {
+  margin-bottom: 12px;
+}
+
+.teaser {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: block;
+  margin: 14px auto;
+}
+
+.figure {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: block;
+  margin: 12px auto;
+}
+
+.small-muted {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 650px) {
+  .profile { width: 180px; height: 180px; }
+  .pub-table, .pub-table tr, .pub-table td { display: block; width: 100%; }
+  .pub-thumb { padding: 10px 6px 0; width: 100%; }
+  .pub-thumb img { width: 200px; margin: 0 auto; }
+  .pub-details { padding: 8px 6px 12px; }
+}

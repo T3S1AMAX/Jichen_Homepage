@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jichen Feng</title>
+    <link rel="stylesheet" type="text/css" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <script src="script.js?v=3"></script>
+  </head>
+
+  <body>
+    <table class="container">
+      <tr>
+        <td style="padding: 20px;">
+
+          <p style="text-align:center; margin-bottom: 8px;">
+            <name>Jichen Feng</name>
+          </p>
+
+          <p style="text-align:center; margin-top: 0;">
+            <img class="profile" src="assets/profile.png" alt="Profile photo (replace assets/profile.png with your own)">
+          </p>
+
+          <div class="links">
+            <a href="cv/cv.pdf">CV</a> |
+            <a href="mailto:jcfeng@sas.upenn.edu">Email</a> |
+            <a href="https://www.linkedin.com/in/jichen-feng-840a63248/">LinkedIn</a> |
+            <a href="https://github.com/T3S1AMAX">GitHub</a>
+          </div>
+
+          <p>I am a Ph.D. student in the Department of Chemistry at the <strong>University of Pennsylvania</strong>, advised by <a href="https://scholar.google.com/citations?user=3sLYF0UAAAAJ&hl=en&oi=ao"><strong>Prof. Joseph E. Subotnik</strong></a> and <a href="https://en.wikipedia.org/wiki/Abraham_Nitzan"><strong>Prof. Abraham Nitzan</strong></a>. Following <a href="https://scholar.google.com/citations?user=3sLYF0UAAAAJ&hl=en&oi=ao">Prof. Subotnik</a>’s move to <strong>Princeton University</strong>, I remain enrolled at the University of Pennsylvania and am also a non-degree trailing student at Princeton, where I have served as a Research Assistant in his <a href="https://subotnikgroup.chemistry.princeton.edu">group</a>.</p>
+          <p>My research is broadly in <strong>theoretical chemical physics</strong> and <strong>non-equilibrium dynamics</strong> in chiral molecular systems (e.g., chiral vibrational modes, vibrational energy transport, and angular-momentum generation under driving). I’m also interested in AI-for-science and building computational systems that help scientists reason and explore.</p>
+
+          <hr>
+
+          <heading>Education</heading>
+          <p>
+            <strong>University of Pennsylvania</strong> — Ph.D. in Chemistry (Aug 2021–present).<br>
+            <strong>University of Science and Technology of China (USTC)</strong> — B.S. in Physics (Sept 2017–Jun 2021).<br>
+          </p>
+
+          <hr>
+
+          <heading>Skills & Interests</heading>
+          <p>
+            <strong>Programming:</strong> C / MATLAB / Python / Julia<br>
+            <strong>Scientific computing:</strong> LAMMPS; DFT; Quantum–Classical Dynamics<br>
+            <strong>Interests:</strong> Nonadiabatic Dynamics; AI for science; Quantum information; Computational condensed matter physics
+          </p>
+
+          <hr>
+
+          <heading>News</heading>
+          <ul>
+            <li><strong>Dec 2025:</strong> Preprint "Nuclear Angular Momentum Generation in Thermally Driven Chiral Systems" accepted to <strong>Phys. Rev. B</strong>.</li>
+            <li><strong>Dec 2025:</strong> "Web World Models" released on arXiv (2512.23676).</li>
+            <li><strong>Dec 2025:</strong> Journal article on "Rectification of Vibrational Energy Transfer in Driven Chiral Molecules" (<strong>J. Chem. Phys. 163(23)</strong>).</li>
+            <li><strong>Jul 2025:</strong> Journal article on "Chiral Vibrational Modes in Small Molecules" (<strong>J. Chem. Phys. 163(1)</strong>).</li>
+          </ul>
+
+          <hr>
+
+          <heading>Publications</heading>
+          <p class="small-muted">
+            Click “abstract” / “bibtex” to expand. Click the paper title (or thumbnail) to open a short project-style page with images.
+          </p>
+
+          <table class="pub-table">
+                <tr>
+      <td class="pub-thumb">
+        <a href="pubs/web-world-models/"><img src="assets/pubs/web-world-models/teaser.png" alt="Web World Models teaser"></a>
+      </td>
+      <td class="pub-details">
+        <papertitle><a href="pubs/web-world-models/">Web World Models</a></papertitle><br>
+        <strong>Jichen Feng</strong>, Yifan Zhang, Chenggong Zhang, Yifu Lu, Shilong Liu, Mengdi Wang<br>
+        <em>arXiv preprint arXiv:2512.23676</em> (2025)<br>
+        <div class="pub-links"><a href="pubs/web-world-models/">webpage</a> | <a href="https://arxiv.org/pdf/2512.23676.pdf">pdf</a> | <a href="#" class="toggle-link" data-toggle="abs-wwm">abstract</a> | <a href="#" class="toggle-link" data-toggle="bib-wwm">bibtex</a> | <a href="https://arxiv.org/abs/2512.23676">arXiv</a> | <a href="https://princeton-ai2-lab.github.io/Web-World-Models/">project</a> | <a href="https://github.com/Princeton-AI2-Lab/Web-World-Models">code</a></div>
+        <div class="abstract" id="abs-wwm">
+	          <strong>Abstract:</strong> Language agents increasingly require persistent worlds in which they can act, remember, and learn. Existing approaches sit at two extremes: conventional web frameworks provide reliable but fixed contexts backed by databases, while fully generative world models aim for unlimited environments, but the world is constructed primarily through generation, making it harder to maintain a fixed, deterministic global framework, reducing controllability. In this work, we introduce the Web World Model (WWM), a middle ground where world state and “physics” are implemented in ordinary web code to ensure logical consistency, while large language models generate context, narratives, and high-level decisions on top of this structured latent state. We build a suite of WWMs on a realistic web stack, including an infinite travel atlas grounded in real geography, fictional galaxy explorers, web-scale encyclopedic and narrative worlds, and simulation- and game-like environments. Across these systems, we identify practical design principles for WWMs: separating code-defined rules from model-driven imagination, representing latent state as typed web interfaces, and utilizing deterministic generation to achieve unlimited but structured exploration. Our results suggest that web stacks themselves can serve as a scalable substrate for world models, enabling controllable yet open-ended environments.
+	        </div>
+        <div class="bibtex" id="bib-wwm">
+          <pre>@misc{feng2025webworldmodels,
+  title        = {Web World Models},
+  author       = {Feng, Jichen and Zhang, Yifan and Zhang, Chenggong and Lu, Yifu and Liu, Shilong and Wang, Mengdi},
+  year         = {2025},
+  eprint       = {2512.23676},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.AI},
+  url          = {https://arxiv.org/abs/2512.23676}
+}</pre>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="pub-thumb">
+        <a href="pubs/rectification-vibrational-energy-transfer/"><img src="assets/pubs/rectification-vibrational-energy-transfer/teaser.png" alt="Rectification of Vibrational Energy Transfer in Driven Chiral Molecules teaser"></a>
+      </td>
+      <td class="pub-details">
+        <papertitle><a href="pubs/rectification-vibrational-energy-transfer/">Rectification of Vibrational Energy Transfer in Driven Chiral Molecules</a></papertitle><br>
+        <strong>Jichen Feng</strong>, Ethan Abraham, Joseph E. Subotnik, Abraham Nitzan<br>
+        <em>The Journal of Chemical Physics 163(23): 234110</em> (2025)<br>
+        <div class="pub-links"><a href="pubs/rectification-vibrational-energy-transfer/">webpage</a> | <a href="https://arxiv.org/pdf/2509.00324.pdf">pdf</a> | <a href="#" class="toggle-link" data-toggle="abs-rect">abstract</a> | <a href="#" class="toggle-link" data-toggle="bib-rect">bibtex</a> | <a href="https://arxiv.org/abs/2509.00324">arXiv</a> | <a href="https://pubs.aip.org/aip/jcp/article/163/23/234110/3374868/Rectification-of-vibrational-energy-transfer-in">journal</a> | <a href="https://doi.org/10.1063/5.0299947">doi</a></div>
+        <div class="abstract" id="abs-rect">
+	          <strong>Abstract:</strong> We show that the combination of molecular chirality and phase-controlled driving can lead to rectification of vibrational energy transfer. We demonstrate this effect using classical models of (1) a single helical chain and (2) a more realistic model of polyethylene double helix. We examine the effect of the driving frequency, polarization, and temperature on this phenomenon. Notably, we find that the direction and magnitude of the observed directionality preference depend on the driving frequency and phase, and that the effect persists at room temperature.
+	        </div>
+        <div class="bibtex" id="bib-rect">
+          <pre>@article{feng2025rectification,
+  title   = {Rectification of Vibrational Energy Transfer in Driven Chiral Molecules},
+  author  = {Feng, Jichen and Abraham, Ethan and Subotnik, Joseph E. and Nitzan, Abraham},
+  journal = {The Journal of Chemical Physics},
+  year    = {2025},
+  volume  = {163},
+  number  = {23},
+  pages   = {234110},
+  doi     = {10.1063/5.0299947},
+  url     = {https://doi.org/10.1063/5.0299947}
+}</pre>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="pub-thumb">
+        <a href="pubs/nuclear-angular-momentum/"><img src="assets/pubs/nuclear-angular-momentum/teaser.png" alt="Nuclear Angular Momentum Generation in Thermally Driven Chiral Systems teaser"></a>
+      </td>
+      <td class="pub-details">
+        <papertitle><a href="pubs/nuclear-angular-momentum/">Nuclear Angular Momentum Generation in Thermally Driven Chiral Systems</a></papertitle><br>
+        <strong>Jichen Feng</strong>, Ethan Abraham, Joseph Subotnik, Abraham Nitzan<br>
+        <em>arXiv preprint arXiv:2508.06738</em> (2025)<br>
+        <div class="pub-links"><a href="pubs/nuclear-angular-momentum/">webpage</a> | <a href="https://arxiv.org/pdf/2508.06738.pdf">pdf</a> | <a href="#" class="toggle-link" data-toggle="abs-nam">abstract</a> | <a href="#" class="toggle-link" data-toggle="bib-nam">bibtex</a> | <a href="https://arxiv.org/abs/2508.06738">arXiv</a> | <a href="https://doi.org/10.48550/arXiv.2508.06738">doi</a></div>
+        <div class="abstract" id="abs-nam">
+	          <strong>Abstract:</strong> The appearance of angular momentum in the nuclear motion of molecular systems lacking inversion symmetry under imposed thermal gradients presents a novel mechanism with potential implications for spintronics, magnetic response, and energy transport in such systems. Here we explore this phenomenon, using theoretical analysis and numerical simulations to study angular momentum generation in several driven chiral molecular models. We demonstrate that significant vibrational angular momentum can be induced under both mechanical and thermal driving, with magnitude comparable to that induced in optically driven chiral phonons. We find that generation of angular momentum is a common and general phenomenon in driven chiral structures, highlighting the role of symmetry-breaking in the (non-equilibrium) internal atomic motion of such systems.
+	        </div>
+        <div class="bibtex" id="bib-nam">
+          <pre>@misc{feng2025nuclearangularmomentum,
+  title        = {Nuclear Angular Momentum Generation in Thermally Driven Chiral Systems},
+  author       = {Feng, Jichen and Abraham, Ethan and Subotnik, Joseph and Nitzan, Abraham},
+  year         = {2025},
+  eprint       = {2508.06738},
+  archivePrefix= {arXiv},
+  primaryClass = {physics.chem-ph},
+  url          = {https://arxiv.org/abs/2508.06738}
+}</pre>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="pub-thumb">
+        <a href="pubs/chiral-vibrational-modes/"><img src="assets/pubs/chiral-vibrational-modes/teaser.png" alt="Chiral Vibrational Modes in Small Molecules teaser"></a>
+      </td>
+      <td class="pub-details">
+        <papertitle><a href="pubs/chiral-vibrational-modes/">Chiral Vibrational Modes in Small Molecules</a></papertitle><br>
+        <strong>Jichen Feng</strong>, Ethan Abraham, Joseph Subotnik, Abraham Nitzan<br>
+        <em>The Journal of Chemical Physics 163(1): 014106</em> (2025)<br>
+        <div class="pub-links"><a href="pubs/chiral-vibrational-modes/">webpage</a> | <a href="https://arxiv.org/pdf/2503.03048.pdf">pdf</a> | <a href="#" class="toggle-link" data-toggle="abs-cvm">abstract</a> | <a href="#" class="toggle-link" data-toggle="bib-cvm">bibtex</a> | <a href="https://arxiv.org/abs/2503.03048">arXiv</a> | <a href="https://pubs.aip.org/aip/jcp/article/163/1/014106/3351423/Chiral-vibrational-modes-in-small-molecules">journal</a> | <a href="https://doi.org/10.1063/5.0271584">doi</a></div>
+        <div class="abstract" id="abs-cvm">
+	          <strong>Abstract:</strong> The development of quantitative methods for characterizing molecular chirality can provide an important tool for studying chirality-induced phenomena in molecular systems. Significant progress has been made in recent years toward understanding the chirality of molecular normal vibrational modes, mostly focusing on vibrations of helical molecular structures. In the present study, we examine the applicability of two methodologies previously used for helical structures for the quantification of the chirality of molecular normal modes across a range of small, not necessarily helical, molecules. The first approach involves the application of the Continuous Chirality Measure (CCM) to each normal mode by associating the mode with a structure formed by imposing the corresponding motion relative to a common origin. The second approach assigns to each normal mode a pseudoscalar defined as the product of atomic linear and angular momentum summed over all atoms. In particular, using the CCM also as a measure of the chirality of the underlying molecular structure, we establish the existence of a correlation between the chirality of molecular normal modes and that of the underlying molecular structure. Furthermore, we find that normal modes associated with different frequency ranges of the molecular vibrational spectrum exhibit distinct handedness behavior.
+	        </div>
+        <div class="bibtex" id="bib-cvm">
+          <pre>@article{feng2025chiralvibrationalmodes,
+  title   = {Chiral Vibrational Modes in Small Molecules},
+  author  = {Feng, Jichen and Abraham, Ethan and Subotnik, Joseph and Nitzan, Abraham},
+  journal = {The Journal of Chemical Physics},
+  year    = {2025},
+  volume  = {163},
+  number  = {1},
+  pages   = {014106},
+  doi     = {10.1063/5.0271584},
+  url     = {https://doi.org/10.1063/5.0271584}
+}</pre>
+        </div>
+      </td>
+    </tr>
+
+          </table>
+
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

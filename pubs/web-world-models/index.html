@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Web World Models | Jichen Feng</title>
+        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+      </head>
+
+      <body>
+        <table class="container">
+          <tr>
+            <td style="padding: 20px;">
+              <div class="backlink">
+                <a href="../../">← Back to homepage</a>
+              </div>
+
+              <heading>Web World Models</heading>
+              <p>
+                <strong>Authors:</strong> Jichen Feng, Yifan Zhang, Chenggong Zhang, Yifu Lu, Shilong Liu, Mengdi Wang<br>
+                <strong>Venue:</strong> <em>arXiv preprint arXiv:2512.23676</em> (2025)
+              </p>
+
+              <p class="pub-links">
+                <a href="https://arxiv.org/pdf/2512.23676.pdf">PDF</a> | <a href="https://arxiv.org/abs/2512.23676">arXiv</a> | <a href="https://princeton-ai2-lab.github.io/Web-World-Models/">Project</a> | <a href="https://github.com/Princeton-AI2-Lab/Web-World-Models">Code</a>
+              </p>
+
+              <img class="teaser" src="../../assets/pubs/web-world-models/teaser.png" alt="Teaser image for Web World Models">
+
+              <heading>Overview</heading>
+              <p>We propose Web World Models (WWMs): persistent, open-ended environments where the world state and rules (“physics”) live in ordinary web code, while large language models generate narrative context and high-level actions. We implement several WWMs on a realistic web stack (e.g., an infinite travel atlas grounded in real geography, procedural galaxy explorers, encyclopedic/narrative worlds, and game-like simulations) and distill practical design principles for making worlds both controllable and scalable.</p>
+
+	              <heading>Images</heading>
+	              <img class="figure" src="../../assets/pubs/web-world-models/fig1.png" alt="Figure 1">
+	              <p class="small-muted"><strong>Fig. 1:</strong> <strong>Left:</strong> Traditional Web Frameworks fix context in databases, limiting scalability. <strong>Center:</strong> The Web World Model (Ours) decouples logic from content, generating unlimited context via LLMs upon a code-based physics layer without heavy data storage. <strong>Right:</strong> Fully generative world models can produce unlimited context and rich video/3D content, but when the world is constructed primarily through generation, it is harder to maintain a fixed, deterministic global framework, reducing controllability.</p>
+	              <img class="figure" src="../../assets/pubs/web-world-models/fig2.png" alt="Figure 2">
+	              <p class="small-muted"><strong>Fig. 2:</strong> Neural-symbolic architecture of <em>AI Alchemy</em>. A React+Canvas user interface (toolbar and natural-language Creator Console) injects user-defined materials into a symbolic cellular-automata “falling-sand” simulator. Upon particle collisions, the engine applies existing reaction rules when available; otherwise, it queries an LLM (Gemini Flash) to synthesize a schema-constrained reaction outcome, which is cached and immediately integrated into the update loop. An optional AI Supervisor monitors the canvas and guides/perturbs the system, enabling controlled emergent behavior in a self-expanding sandbox.</p>
+
+	              <heading>Citation</heading>
+	              <div class="bibtex">
+	                <pre>@misc{feng2025webworldmodels,
+  title        = {Web World Models},
+  author       = {Feng, Jichen and Zhang, Yifan and Zhang, Chenggong and Lu, Yifu and Liu, Shilong and Wang, Mengdi},
+  year         = {2025},
+  eprint       = {2512.23676},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.AI},
+  url          = {https://arxiv.org/abs/2512.23676}
+}</pre>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
