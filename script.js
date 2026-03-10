@@ -11,6 +11,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.querySelectorAll(".image-with-placeholder").forEach((container) => {
+    const img = container.querySelector("img");
+    const placeholder = container.querySelector(".asset-placeholder");
+    if (!img || !placeholder) return;
+
+    const showImage = () => {
+      img.hidden = false;
+      placeholder.hidden = true;
+    };
+
+    const showPlaceholder = () => {
+      img.hidden = true;
+      placeholder.hidden = false;
+    };
+
+    if (img.complete) {
+      if (img.naturalWidth > 0) {
+        showImage();
+      } else {
+        showPlaceholder();
+      }
+      return;
+    }
+
+    img.addEventListener("load", showImage, { once: true });
+    img.addEventListener("error", showPlaceholder, { once: true });
+  });
+
   document.addEventListener("click", (event) => {
     const link = event.target.closest("a[data-toggle]");
     if (!link) return;
