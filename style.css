@@ -351,11 +351,29 @@ hr {
   body, td, th, tr, p, a, strong { font-size: 18px; line-height: 1.55; }
   .small-muted { font-size: 13px; }
   .profile { width: 160px; height: 160px; }
-  .pub-table, .pub-table tr, .pub-table td { display: block; width: 100%; }
+  .pub-table,
+  .pub-table tbody,
+  .pub-table tr,
+  .pub-table td {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .pub-table tbody,
+  .pub-table tr,
+  .pub-thumb,
+  .pub-details {
+    min-width: 0;
+  }
   .pub-thumb { padding: 10px 6px 0; width: 100%; }
   .pub-thumb img { width: 160px; margin: 0 auto; }
   .pub-thumb .asset-placeholder { width: 160px; min-height: 120px; margin: 0 auto; }
   .pub-details { padding: 8px 6px 12px; }
+  .bibtex pre {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
   .teaser-placeholder { min-height: 220px; }
   .software-card {
     padding: 12px;
