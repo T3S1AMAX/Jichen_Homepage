@@ -7,7 +7,7 @@
     <meta name="description"
         content="Jichen Feng — PhD researcher in theoretical and computational chemistry. Work: nonadiabatic dynamics (Ehrenfest), chiral molecular systems, electron–phonon coupling, and AI for science.">
     <link rel="canonical" href="https://jichen-feng.com/">
-    <link rel="stylesheet" type="text/css" href="style.css?v=3">
+    <link rel="stylesheet" type="text/css" href="style.css?v=7">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <script src="script.js?v=3"></script>
   </head>
@@ -34,6 +34,7 @@
 
           <p>I am a Ph.D. student in the Department of Chemistry at the <strong>University of Pennsylvania</strong>, advised by <a href="https://scholar.google.com/citations?user=3sLYF0UAAAAJ&hl=en&oi=ao"><strong>Prof. Joseph E. Subotnik</strong></a> and <a href="https://en.wikipedia.org/wiki/Abraham_Nitzan"><strong>Prof. Abraham Nitzan</strong></a>. Following <a href="https://scholar.google.com/citations?user=3sLYF0UAAAAJ&hl=en&oi=ao">Prof. Subotnik</a>’s move to <strong>Princeton University</strong>, I remain enrolled at the University of Pennsylvania and am also a non-degree trailing student at Princeton, where I have served as a Research Assistant in his <a href="https://subotnikgroup.chemistry.princeton.edu">group</a>.</p>
           <p>My research is broadly in <strong>theoretical chemical physics</strong> and <strong>non-equilibrium dynamics</strong> in chiral molecular systems (e.g., chiral vibrational modes, vibrational energy transport, and angular-momentum generation under driving). I’m also interested in AI-for-science and building computational systems that help scientists reason and explore.</p>
+          <p>I am the creator and lead developer of <a href="https://github.com/math-ai-org/mathcode"><strong>MathCode</strong></a>, an open-source mathematical coding agent with built-in Lean capabilities for interactive mathematical reasoning and formal proof verification.</p>
 
           <hr>
 
@@ -54,6 +55,26 @@
 
           <hr>
 
+          <heading>Open-Source Software</heading>
+          <div class="software-card">
+            <a class="software-visual" href="https://github.com/math-ai-org/mathcode" aria-label="MathCode GitHub repository">
+              <img class="software-image" src="assets/mathcode-demo.png" alt="MathCode terminal interface demonstrating interactive Lean formalization">
+            </a>
+            <div class="software-details">
+              <papertitle><a href="https://github.com/math-ai-org/mathcode">MathCode: A Frontier Mathematical Coding Agent</a></papertitle>
+              <div class="software-role">Creator &amp; Lead Developer</div>
+              <p>MathCode is an open-source terminal AI coding assistant for mathematical reasoning and formal verification. It can inspect Lean goals, search declarations, check candidate proofs, and verify completed proofs interactively.</p>
+              <div class="software-links">
+                <a href="https://math-ai-org.github.io/mathcode">project page</a> |
+                <a href="https://github.com/math-ai-org/mathcode">GitHub</a> |
+                <a href="https://github.com/math-ai-org/mathcode/releases/tag/v0.3.0">v0.3.0</a> |
+                <a href="https://github.com/math-ai-org/mathcode/stargazers">700+ GitHub stars</a>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
           <heading>News</heading>
           <ul>
             <li><strong>Mar 2026:</strong> "Interactive Benchmarks" released on arXiv (2603.04737).</li>
@@ -70,8 +91,60 @@
             Click “abstract” / “bibtex” to expand. Click the paper title (or thumbnail) to open a short project-style page with images.
           </p>
 
-          <table class="pub-table">
-    <tr>
+	          <table class="pub-table">
+	    <tr>
+	      <td class="pub-thumb">
+	        <a href="pubs/fast-weight-attention/"><img src="assets/pubs/fast-weight-attention/teaser.png" alt="Fast Weight Attention for Continual Learning teaser"></a>
+	      </td>
+	      <td class="pub-details">
+	        <papertitle><a href="pubs/fast-weight-attention/">Fast Weight Attention for Continual Learning</a></papertitle><br>
+	        Yifan Zhang, Steve Ta, Jasper Zhang, <strong>Jichen Feng</strong>, Shuzhen Li, Yongxin Zhang, Yifeng Liu, Huizhuo Yuan, Mengdi Wang, Quanquan Gu, Andrew Chi-Chih Yao<br>
+	        <em>arXiv preprint arXiv:2608.27763</em> (2026)<br>
+	        <div class="pub-links"><a href="pubs/fast-weight-attention/">webpage</a> | <a href="https://arxiv.org/pdf/2608.27763">pdf</a> | <a href="#" class="toggle-link" data-toggle="abs-fwa">abstract</a> | <a href="#" class="toggle-link" data-toggle="bib-fwa">bibtex</a> | <a href="https://arxiv.org/abs/2608.27763">arXiv</a> | <a href="https://github.com/yifanzhang-pro/fast-weight-attention">project</a> | <a href="https://doi.org/10.48550/arXiv.2608.27763">doi</a></div>
+	        <div class="abstract" id="abs-fwa">
+	          <strong>Abstract:</strong> Recurrent fast-weight memories and selective state-space models compress an expanding context into a fixed-size recurrent state, making the state transition an online learning rule. We study this rule under read-after-write autoregressive semantics. For the prefix-prediction objective considered here, the local fast-memory example revealed at step <em>t</em> is the prefix-aligned pair (<strong>x</strong><sub>t</sub>, <strong>y</strong><sub>t</sub>) = (φ(<strong>k</strong><sub>t-1</sub>), <strong>v</strong><sub>t</sub>). The common same-step association (φ(<strong>k</strong><sub>t</sub>), <strong>v</strong><sub>t</sub>) remains causal, but optimizes a different internal objective. We derive normalized first-order updates for squared-error regression and negative inner-product objectives. The regression family comprises Falcon-1 (a scalar NLMS update), Falcon-2 (its per-column extension), and Falcon-3 (a sliding-window mini-batch update); Falcon-1A/Falcon-2A/Falcon-3A are the corresponding inner-product variants. We provide recurrent, masked-parallel, and chunk-parallel forms, together with numerically stable positive-decay renormalization. Representative variants remain competitive in language modeling and improve length extrapolation on variable-digit addition. This framework separates temporal alignment, plasticity, forgetting, and bounded rehearsal in recurrent sequence models.
+	        </div>
+	        <div class="bibtex" id="bib-fwa">
+	          <pre>@misc{zhang2026fastweightattention,
+  title        = {Fast Weight Attention for Continual Learning},
+  author       = {Zhang, Yifan and Ta, Steve and Zhang, Jasper and Feng, Jichen and Li, Shuzhen and Zhang, Yongxin and Liu, Yifeng and Yuan, Huizhuo and Wang, Mengdi and Gu, Quanquan and Yao, Andrew Chi-Chih},
+  year         = {2026},
+  eprint       = {2608.27763},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.LG},
+  url          = {https://arxiv.org/abs/2608.27763}
+}</pre>
+	        </div>
+	      </td>
+	    </tr>
+
+	    <tr>
+	      <td class="pub-thumb">
+	        <a href="pubs/chiral-vibrational-modes-vcd/"><img src="assets/pubs/chiral-vibrational-modes-vcd/teaser.png" alt="Chiral vibrational modes and vibrational circular dichroism teaser"></a>
+	      </td>
+	      <td class="pub-details">
+	        <papertitle><a href="pubs/chiral-vibrational-modes-vcd/">Chiral vibrational modes and vibrational circular dichroism</a></papertitle><br>
+	        Xuecheng Tao, Clàudia Climent, Ethan Abraham, <strong>Jichen Feng</strong>, Abraham Nitzan<br>
+	        <em>arXiv preprint arXiv:2607.22257</em> (2026)<br>
+	        <div class="pub-links"><a href="pubs/chiral-vibrational-modes-vcd/">webpage</a> | <a href="https://arxiv.org/pdf/2607.22257">pdf</a> | <a href="#" class="toggle-link" data-toggle="abs-vcd">abstract</a> | <a href="#" class="toggle-link" data-toggle="bib-vcd">bibtex</a> | <a href="https://arxiv.org/abs/2607.22257">arXiv</a> | <a href="https://doi.org/10.48550/arXiv.2607.22257">doi</a></div>
+	        <div class="abstract" id="abs-vcd">
+	          <strong>Abstract:</strong> The recent interest in chiral phonons in a variety of physical phenomena and their hypothesized role in the chiral-induced spin selectivity effect calls for further investigation into the chirality of molecular vibrations. Although molecular chirality has conventionally been quantified using structural properties, recent work has highlighted the role of dynamical response properties as chirality metrics. In this work, we examine an inter-atom helicity pseudoscalar as a complementary measure of vibrational chirality, associated with the vibrational circular dichroism (VCD) intensity in the fixed partial charge (FPC) approximation. This pseudoscalar is translationally and rotationally invariant, can distinguish between opposite enantiomers, and unlike an atomic pseudoscalar measure considered in our earlier work does not rely on a predefined symmetry axis. For a twisted ethane model as well as several small molecules, this pseudoscalar correlates well with structural descriptors based on the continuous chirality measure. Overall, our results support response-based metrics as a physically meaningful and practically useful characterization of vibrational chirality. Importantly, while the FPC-based VCD estimate provides a useful quantifier of vibrational chirality, we show that it is a rather poor predictor of the actual molecular VCD response because the latter is strongly influenced by the vibrational configuration-dependent molecular electronic response.
+	        </div>
+	        <div class="bibtex" id="bib-vcd">
+	          <pre>@misc{tao2026chiralvibrationalmodes,
+  title        = {Chiral Vibrational Modes and Vibrational Circular Dichroism},
+  author       = {Tao, Xuecheng and Climent, Clàudia and Abraham, Ethan and Feng, Jichen and Nitzan, Abraham},
+  year         = {2026},
+  eprint       = {2607.22257},
+  archivePrefix= {arXiv},
+  primaryClass = {physics.chem-ph},
+  url          = {https://arxiv.org/abs/2607.22257}
+}</pre>
+	        </div>
+	      </td>
+	    </tr>
+
+	    <tr>
       <td class="pub-thumb">
         <a href="pubs/interactive-benchmarks/">
           <div class="image-with-placeholder">
@@ -212,10 +285,89 @@
       </td>
     </tr>
 
-          </table>
+	          </table>
+
+	          <hr>
+
+	          <heading>Posters / Talks</heading>
+	          <p class="small-muted">Selected posters and talks.</p>
+
+	          <div class="poster-grid">
+	            <article class="poster-card">
+	              <a class="poster-preview" href="posters/ciss-meta-study-poster.pdf" target="_blank" rel="noopener">
+	                <img src="assets/posters/ciss-meta-study.png" alt="Tentative Results from a Meta-Study of the CISS Literature poster preview">
+	              </a>
+	              <div class="poster-card-body">
+	                <papertitle><a href="posters/ciss-meta-study-poster.pdf" target="_blank" rel="noopener">Tentative Results from a Meta-Study of the CISS Literature</a></papertitle>
+	                <p class="poster-authors"><strong>Jichen Feng</strong>, Joseph E. Subotnik, Abraham Nitzan</p>
+	                <p class="poster-type">Poster</p>
+	              </div>
+	            </article>
+
+	            <article class="poster-card">
+	              <a class="poster-preview" href="posters/linear-angular-momentum-coupling-poster.pdf" target="_blank" rel="noopener">
+	                <img src="assets/posters/linear-angular-momentum-coupling.png" alt="Consequences of Linear-Angular Momentum Coupling in Chiral Molecular Systems poster preview">
+	              </a>
+	              <div class="poster-card-body">
+	                <papertitle><a href="posters/linear-angular-momentum-coupling-poster.pdf" target="_blank" rel="noopener">Consequences of Linear-Angular Momentum Coupling in Chiral Molecular Systems</a></papertitle>
+	                <p class="poster-authors"><strong>Jichen Feng</strong>, Ethan Abraham, Joseph E. Subotnik, Abraham Nitzan</p>
+	                <p class="poster-type">Poster</p>
+	              </div>
+	            </article>
+
+	            <article class="poster-card">
+	              <a class="poster-preview" href="posters/chirality-measures-heat-gradient-poster.pdf" target="_blank" rel="noopener">
+	                <img src="assets/posters/chirality-measures-heat-gradient.png" alt="Chirality Measures and Angular Momentum Generation by Heat Gradient poster preview">
+	              </a>
+	              <div class="poster-card-body">
+	                <papertitle><a href="posters/chirality-measures-heat-gradient-poster.pdf" target="_blank" rel="noopener">Chirality Measures and Angular Momentum Generation by Heat Gradient</a></papertitle>
+	                <p class="poster-authors"><strong>Jichen Feng</strong>, Ethan Abraham, Joseph E. Subotnik, Abraham Nitzan</p>
+	                <p class="poster-type">Poster</p>
+	              </div>
+	            </article>
+	          </div>
+
+	          <h3 class="presentation-heading">Selected presentations</h3>
+	          <div class="presentation-list">
+	            <div class="presentation-item">
+	              <time class="presentation-date" datetime="2026-09">Sept. 2026</time>
+	              <div class="presentation-title">Symposium on Chiral Induced Spin Selectivity (CISS)</div>
+	              <span class="presentation-kind">Poster</span>
+	            </div>
+	            <div class="presentation-item">
+	              <time class="presentation-date" datetime="2026-06">Jun. 2026</time>
+	              <div class="presentation-title">Molecular Interactions and Dynamics Gordon Research Conference</div>
+	              <span class="presentation-kind">Poster</span>
+	            </div>
+	            <div class="presentation-item">
+	              <time class="presentation-date" datetime="2026-06">Jun. 2026</time>
+	              <div class="presentation-title">Chirality Induced Spin Selectivity Online Seminars</div>
+	              <span class="presentation-kind">Talk</span>
+	            </div>
+	            <div class="presentation-item">
+	              <time class="presentation-date" datetime="2026-03">Mar. 2026</time>
+	              <div class="presentation-title">APS Global Physics Summit</div>
+	              <span class="presentation-kind">Talk</span>
+	            </div>
+	            <div class="presentation-item">
+	              <time class="presentation-date" datetime="2025-08">Aug. 2025</time>
+	              <div class="presentation-title">Gordon Research Conference: Electron Spin Interactions with Chiral Molecules and Materials</div>
+	              <span class="presentation-kind">Poster</span>
+	            </div>
+	            <div class="presentation-item">
+	              <time class="presentation-date" datetime="2025-05">May 2025</time>
+	              <div class="presentation-title">Princeton Center for Theoretical Science: Nonadiabatic Dynamics, Electron-Phonon Interactions, and Spin-Phonon Couplings</div>
+	              <span class="presentation-kind">Poster</span>
+	            </div>
+	            <div class="presentation-item">
+	              <time class="presentation-date" datetime="2025-05">May 2025</time>
+	              <div class="presentation-title">Penn Conference on Theoretical Chemistry (PCTC)</div>
+	              <span class="presentation-kind">Poster</span>
+	            </div>
+	          </div>
 
 
-        </td>
+	        </td>
       </tr>
     </table>
   </body>
