@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recurrent Looped Transformer | Jichen Feng</title>
+    <meta name="description" content="Recurrent Looped Transformer by Yifan Zhang, Jichen Feng, and Shihan Qin. arXiv:2610.07591 (2026).">
+    <link rel="canonical" href="https://jichen-feng.com/pubs/recurrent-looped-transformer/">
+    <link rel="stylesheet" type="text/css" href="../../style.css?v=8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <table class="container">
+      <tr>
+        <td style="padding: 20px;">
+          <div class="backlink">
+            <a href="../../">← Back to homepage</a>
+          </div>
+
+          <heading>Recurrent Looped Transformer</heading>
+          <p>
+            <strong>Authors:</strong> Yifan Zhang, <strong>Jichen Feng</strong>, Shihan Qin<br>
+            <strong>Venue:</strong> <em>arXiv preprint arXiv:2610.07591</em> (2026)
+          </p>
+
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2610.07591">PDF</a> |
+            <a href="https://arxiv.org/abs/2610.07591">arXiv</a> |
+            <a href="https://yifanzhang-pro.github.io/recurrent-looped-tranformer/">Project</a> |
+            <a href="https://github.com/yifanzhang-pro/recurrent-looped-tranformer">GitHub</a> |
+            <a href="https://doi.org/10.48550/arXiv.2610.07591">DOI</a>
+          </p>
+
+          <a href="../../assets/pubs/recurrent-looped-transformer/teaser.png" aria-label="View the full-size Recurrent Looped Transformer architecture">
+            <img class="teaser" src="../../assets/pubs/recurrent-looped-transformer/teaser.png" alt="A causal encoder provides token representations and KV memory to a recurrent decoder that carries state across prompt and response tokens">
+          </a>
+          <p class="small-muted">Architecture figure from the <a href="https://github.com/yifanzhang-pro/recurrent-looped-tranformer" style="font-size: inherit;">official project</a>. Copyright 2026 Yifan Zhang; <a href="../../assets/pubs/recurrent-looped-transformer/LICENSE.txt" style="font-size: inherit;">Apache License 2.0</a>.</p>
+
+          <heading>Overview</heading>
+          <p>RLT combines parallel causal encoding with token-by-token recurrent decoding. A gated connection carries the previous decoder output into the next token, extending the model’s computation path as sequences grow while keeping the number of blocks evaluated for each token fixed. The paper studies six algorithmic tasks across encoder/decoder depth splits and feedback schedules. On selected parity and permutation-tracking settings, recurrent feedback substantially improves length extrapolation over an eight-layer Transformer. The ablations also show a trade-off: updating feedback less frequently enables parallel chunk processing, but hurts tasks that require fine-grained state updates.</p>
+
+          <heading>Citation</heading>
+          <div class="citation-block">
+            <pre>@misc{zhang2026recurrentlooped,
+  title        = {Recurrent Looped Transformer},
+  author       = {Zhang, Yifan and Feng, Jichen and Qin, Shihan},
+  year         = {2026},
+  eprint       = {2610.07591},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.CL},
+  url          = {https://arxiv.org/abs/2610.07591}
+}</pre>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
