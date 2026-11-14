@@ -26,6 +26,10 @@ npx serve .
 - Edit `index.html` and `pubs/*/index.html` for text.
 
 The CV is at `cv/cv.pdf` (replace with your latest).
+Before publishing a replacement, check `pdfinfo cv/cv.pdf`: its embedded Title
+should be `Jichen Feng - Curriculum Vitae`, not an employer-specific application
+or draft name. This metadata can appear in search results and PDF viewers.
+Keep the CV searchable and bump its `?v=` value in `index.html` when replacing it.
 
 ## Deploy with GitHub Pages (custom domain supported)
 
