@@ -31,8 +31,10 @@ should be `Jichen Feng - Curriculum Vitae`, not an employer-specific application
 or draft name. This metadata can appear in search results and PDF viewers.
 Keep the CV searchable and keep its public URL fixed at
 `https://jichen-feng.com/cv/cv.pdf` (no `?v=` parameter). `_headers` makes every
-query-string variant point to that same canonical URL and explicitly uses
-`no-cache` to require revalidation even if the domain increases `max-age`.
+query-string variant point to that same canonical URL. For this PDF only,
+`Cache-Control: no-store` and `Cloudflare-CDN-Cache-Control: no-store` ask browsers
+and Cloudflare to fetch the current file instead of retaining an older copy.
+These cache directives do not prevent search indexing or downloading the CV.
 Existing versioned links remain usable; they are not deleted
 or blocked with `noindex`.
 
@@ -42,7 +44,11 @@ headers, crawl permissions, and sitemap URLs without changing the PDF.
 Add new publication pages to `sitemap.xml` when publishing them.
 
 After deployment, check the `Link` and `Cache-Control` response headers on both
-`/cv/cv.pdf` and old `?v=` URLs. In Google Search Console, inspect the unversioned
+`/cv/cv.pdf` and old `?v=` URLs. The public response must include the canonical
+`Link` and `Cache-Control: no-store`; a successful Pages build alone is not enough.
+If the custom domain overrides these headers, check its Cloudflare Cache Rules
+and Browser Cache TTL, respect the origin headers for `/cv/cv.pdf`, and purge
+only the affected CV URLs. In Google Search Console, inspect the unversioned
 CV URL, request indexing, and submit `https://jichen-feng.com/sitemap.xml`.
 Search-title/sitelink updates depend on Google's recrawling and processing;
 a successful deployment does not mean the old search title has disappeared.

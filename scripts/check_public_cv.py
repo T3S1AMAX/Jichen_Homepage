@@ -72,8 +72,10 @@ cv_headers = rules.get("/cv/cv.pdf", {})
 require(cv_headers.get("link") == f'<{CV_URL}>; rel="canonical"',
         "Declare the same canonical URL for every CV query variant.")
 cache_rules = {rule.strip() for rule in cv_headers.get("cache-control", "").split(",")}
-require({"no-cache", "max-age=0", "must-revalidate"} <= cache_rules,
-        "Revalidate the PDF cache instead of versioning its public URL.")
+require({"no-store", "no-cache", "max-age=0", "must-revalidate"} <= cache_rules,
+        "Fetch the latest PDF instead of versioning its public URL.")
+require(cv_headers.get("cloudflare-cdn-cache-control") == "no-store",
+        "Keep the custom-domain CDN from retaining an older PDF.")
 for route, headers in rules.items():
     if any(fnmatchcase(path, route) or fnmatchcase(urljoin(SITE, path), route)
            for path in ("/", "/cv/cv.pdf")):
