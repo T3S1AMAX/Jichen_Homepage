@@ -31,8 +31,9 @@ should be `Jichen Feng - Curriculum Vitae`, not an employer-specific application
 or draft name. This metadata can appear in search results and PDF viewers.
 Keep the CV searchable and keep its public URL fixed at
 `https://jichen-feng.com/cv/cv.pdf` (no `?v=` parameter). `_headers` makes every
-query-string variant point to that same canonical URL and requires caches to
-revalidate the PDF. Existing versioned links remain usable; they are not deleted
+query-string variant point to that same canonical URL and explicitly uses
+`no-cache` to require revalidation even if the domain increases `max-age`.
+Existing versioned links remain usable; they are not deleted
 or blocked with `noindex`.
 
 Before publishing, run `python3 scripts/check_public_cv.py` (requires Poppler's

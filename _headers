@@ -2,4 +2,4 @@
 # Revalidate cached copies instead of publishing a new ?v= URL for each update.
 /cv/cv.pdf
   Link: <https://jichen-feng.com/cv/cv.pdf>; rel="canonical"
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, no-cache, max-age=0, must-revalidate
