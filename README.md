@@ -29,7 +29,22 @@ The CV is at `cv/cv.pdf` (replace with your latest).
 Before publishing a replacement, check `pdfinfo cv/cv.pdf`: its embedded Title
 should be `Jichen Feng - Curriculum Vitae`, not an employer-specific application
 or draft name. This metadata can appear in search results and PDF viewers.
-Keep the CV searchable and bump its `?v=` value in `index.html` when replacing it.
+Keep the CV searchable and keep its public URL fixed at
+`https://jichen-feng.com/cv/cv.pdf` (no `?v=` parameter). `_headers` makes every
+query-string variant point to that same canonical URL and requires caches to
+revalidate the PDF. Existing versioned links remain usable; they are not deleted
+or blocked with `noindex`.
+
+Before publishing, run `python3 scripts/check_public_cv.py` (requires Poppler's
+`pdfinfo`). This checks the PDF title, stable homepage link, canonical/cache
+headers, crawl permissions, and sitemap URLs without changing the PDF.
+Add new publication pages to `sitemap.xml` when publishing them.
+
+After deployment, check the `Link` and `Cache-Control` response headers on both
+`/cv/cv.pdf` and old `?v=` URLs. In Google Search Console, inspect the unversioned
+CV URL, request indexing, and submit `https://jichen-feng.com/sitemap.xml`.
+Search-title/sitelink updates depend on Google's recrawling and processing;
+a successful deployment does not mean the old search title has disappeared.
 
 ## Deploy with GitHub Pages (custom domain supported)
 

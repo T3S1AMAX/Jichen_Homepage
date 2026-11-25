@@ -1,0 +1,5 @@
+# Keep the CV public and consolidate all query-string variants for search.
+# Revalidate cached copies instead of publishing a new ?v= URL for each update.
+/cv/cv.pdf
+  Link: <https://jichen-feng.com/cv/cv.pdf>; rel="canonical"
+  Cache-Control: public, max-age=0, must-revalidate
